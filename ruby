@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "Installing Ruby 1.9.3 stable ..."
-  rbenv install 1.9.3-p320
+  rbenv install ruby-1.9.3-p194
   rbenv rehash
 
 echo "Installing Rails to write and run web applications ..."
