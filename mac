@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "You need to have installed the latest Apple Developer Tools ..."
+  sudo /usr/bin/xcode-select -switch /Applications/Xcode.app/Contents/Developer
 # echo "Checking for SSH key, generating one if it doesn't exist ..."
 #   [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
 
@@ -14,6 +16,11 @@ echo "Installing Homebrew, a good OS X package manager ..."
 echo "Put Homebrew location earlier in PATH ..."
   echo "export PATH='/usr/local/bin:$PATH'" >> ~/.bash_profile
   source ~/.bash_profile
+
+echo "Installing GCC 4.2 compiler for compatibilty ..."
+  brew tap homebrew/dupes
+  brew install apple-gcc42
+
 
 echo "Installing Postgres, a good open source relational database ..."
   brew install postgres --no-python
@@ -36,6 +43,7 @@ echo "Installing ImageMagick, good for cropping and re-sizing images ..."
 echo "Installing rbenv and ruby-build for managing and installing ruby versions ..."
   brew install rbenv
   brew install ruby-build
+  echo 'export CPPFLAGS=-I/opt/X11/include' >> ~/.bash_profile
   echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 
 curl -s https://raw.github.com/natebird/laptop/master/ruby | sh
