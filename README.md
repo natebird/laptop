@@ -6,10 +6,8 @@ Laptop is a script to set up your Max OS X laptop as a Rails development machine
 Requirements
 ------------
 
-* C compiler, such as GCC, LLVM, or Clang.
-
-Download a compiler from [OS X GCC Installer](https://github.com/kennethreitz/osx-gcc-installer/) if you're on Snow Leopard (OS X 10.6) or [Command Line Tools for XCode](https://developer.apple.com/downloads/index.action) if you're on Lion (OS X 10.7) or Mountain Lion (OS X 10.8).
-
+* Apple Developer Tools from [Apple Developer site](https://developer.apple.com).
+* XQuartz (for installing Ruby 1.8.7) from [MacOSForge](http://xquartz.macosforge.org/landing).
 
 Install
 -------
@@ -29,9 +27,6 @@ What it sets up
 * rbenv (for managing versions of the Ruby programming language)
 * Ruby language (for writing general-purpose code)
 * Bundler gem (for managing Ruby libraries)
-* Rails gem (for writing web applications)
-* Heroku gem (for interacting with the Heroku API)
-* Taps gem (for pushing and pulling SQL databases between environments)
-* Postgres gem (for making Ruby talk to SQL databases)
+* POW gem (for easily running applications locally)
 
-It should take about 20 minutes for everything to install, depending on your machine.
+It should take about 15 minutes for everything to install, depending on your machine.
