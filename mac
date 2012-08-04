@@ -40,10 +40,14 @@ echo "Installing ImageMagick, good for cropping and re-sizing images ..."
 # echo "Installing QT, used by Capybara Webkit for headless Javascript integration testing ..."
 #   brew install qt
 
+echo "Download XQuartz from http://xquartz.macosforge.org/landing/ and install..."
+  echo "Hit enter to continue..."
+  read     # this should pause and wait for user to do the manual install
+  echo 'export CPPFLAGS=-I/opt/X11/include' >> ~/.bash_profile
+
 echo "Installing rbenv and ruby-build for managing and installing ruby versions ..."
   brew install rbenv
   brew install ruby-build
-  echo 'export CPPFLAGS=-I/opt/X11/include' >> ~/.bash_profile
   echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 
 curl -s https://raw.github.com/natebird/laptop/master/ruby | sh
