@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "Installing Ruby 1.9.3 stable ..."
-  rbenv install ruby-1.9.3-p194
+  rbenv install 1.9.3-p194
   rbenv rehash
 
 echo "Don't install rdoc with gems ..."
