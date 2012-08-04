@@ -1,7 +1,12 @@
 #!/bin/sh
 
-echo "You need to have installed the latest Apple Developer Tools ..."
-  sudo /usr/bin/xcode-select -switch /Applications/Xcode.app/Contents/Developer
+echo "Download the latest Apple Developer Tools and install for compiling stuff ..."
+echo "Hit enter to continue..."
+read     # this should pause and wait for user to do the manual install
+
+# Not sure if this is needed anymore with Xcode 4.4+
+# sudo /usr/bin/xcode-select -switch /Applications/Xcode.app/Contents/Developer
+
 # echo "Checking for SSH key, generating one if it doesn't exist ..."
 #   [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
 
@@ -17,22 +22,15 @@ echo "Put Homebrew location earlier in PATH ..."
   echo "export PATH='/usr/local/bin:$PATH'" >> ~/.bash_profile
   source ~/.bash_profile
 
-echo "Installing GCC 4.2 compiler for compatibilty ..."
+echo "Installing GCC 4.2 compiler for legacy (ruby 1.8.7) compatibilty ..."
   brew tap homebrew/dupes
   brew install apple-gcc42
-
 
 echo "Installing Postgres, a good open source relational database ..."
   brew install postgres --no-python
 
-# echo "Installing Redis, a good key-value database ..."
-#   brew install redis
-
 echo "Installing ack, a good way to search through files ..."
   brew install ack
-
-# echo "Installing tmux, a good way to save project state and switch between projects ..."
-#   brew install tmux
 
 echo "Installing ImageMagick, good for cropping and re-sizing images ..."
   brew install imagemagick
@@ -51,4 +49,3 @@ echo "Installing rbenv and ruby-build for managing and installing ruby versions 
   echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 
 curl -s https://raw.github.com/natebird/laptop/master/ruby | sh
-# zsh < <(curl -s https://raw.github.com/thoughtbot/laptop/master/heroku)
