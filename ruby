@@ -13,6 +13,9 @@ echo "Don't install gem rdocs ..."
 
 echo "Installing bundler to manage gems ..."
   gem install bundler
+  
+echo "Install postgres with ARCHFLAGS for a better db ..."
+  env ARCHFLAGS="-arch x86_64" gem install pg
 
 echo "Installing pow for easy local development ..."
   curl get.pow.cx | sh
