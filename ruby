@@ -4,7 +4,7 @@ echo "Installing Ruby 1.9.3 stable ..."
   rbenv install 1.9.3-p194
   rbenv rehash
 
-echo "Installing Ruby 1.9.3 stable ..."
+echo "Installing Ruby 1.8.7 stable ..."
   rbenv install 1.8.7-p358
   rbenv rehash
 
