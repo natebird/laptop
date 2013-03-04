@@ -15,7 +15,7 @@ read     # this should pause and wait for user to do the manual install
 #   open https://github.com/account/ssh
 
 echo "Installing Homebrew, a good OS X package manager ..."
-  ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
+  ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
   brew update
 
 echo "Put Homebrew location earlier in PATH ..."
